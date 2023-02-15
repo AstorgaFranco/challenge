@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,7 +23,8 @@ public class UpdateDescAndPrior {
 
      if (task != null && (id != null && id >= 0)   ){
          if(!task.getDescription().equals("")&& task.getPriority()!= null){
-             Optional<Task>task1 = taskRepository.findById(id);
+             Optional<Task>task1 = taskRepository.findSorete(id);
+
 
              if (task1.isPresent()) {
                  Task updateTask =  taskRepository.findById(id).get();

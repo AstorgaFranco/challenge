@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:8081")
 @RequestMapping
 @RestController
 public class controller {

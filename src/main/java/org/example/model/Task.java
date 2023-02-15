@@ -5,13 +5,14 @@ import org.springframework.lang.NonNull;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "Task",schema = "challenge")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "description")
     private String description;
-    @Column(name = "PRIORITY")
+    @Column(name = "priority")
     private Long priority;
 
 
